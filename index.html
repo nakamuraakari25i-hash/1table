@@ -61,6 +61,11 @@
             <td>性別</td>
             <td>女</td>
         </tr>
+         <!-- 表のデータ：3行目 -->
+        <tr>
+            <td>恋愛対象の性別</td>
+            <td>女</td>
+        </tr>
         <!-- 表のデータ：4行目 -->
         <tr>
             <td>職業</td>
@@ -94,5 +99,31 @@
 
     </table>
 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダムページ</title>
+  <style>
+    body { display: flex; justify-content: center; align-items: center; height: 30vh; margin: 0; background: #f0f0f0; }
+    button { font-size: 24px; padding: 20px 40px; border-radius: 12px; border: none; background: #000000; color: white; cursor: pointer; }
+    button:active { background: #000000; }
+  </style>
+</head>
+<body>
+  <button onclick="goRandom()">現代人間事典</button>
+  <script>
+    const pages = [
+      "https://nakamuraakari25i-hash.github.io/1table/",
+      "https://nakamuraakari25i-hash.github.io/2table/"
+    ];
+    function goRandom() {
+      const url = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = url;
+    }
+  </script>
 </body>
 </html>
